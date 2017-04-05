@@ -1497,6 +1497,16 @@ table {
                     }
                 }
             }
+            .buttonBox {
+                .colBox {
+                    display: inline-block;
+                    width: ~"calc((100% / 4) - 4px)";
+                    .btn {
+                        margin: 3px;
+                        width: 100%;
+                    }
+                }
+            }
             &:before {
                 position: absolute;
                 left: 10px;
@@ -1598,17 +1608,16 @@ table {
                                 font-size: 11px;
                                 line-height: 18px;
                                 display: inline-block;
-                                &:nth-child(odd){
+                                &:nth-child(odd) {
                                     border-right: 1px solid #006934;
-                                    padding-right:5px;
-                                    
+                                    padding-right: 5px;
                                 }
                             }
                         }
                     }
                 }
             }
-        }        
+        }
         @media (max-width: 600px) {
             .topArea {
                 height: 500px;
@@ -1688,12 +1697,20 @@ table {
                                 font-size: 11px;
                                 line-height: 18px;
                                 display: inline-block;
-                                &:nth-child(odd){
+                                &:nth-child(odd) {
                                     border-right: 1px solid #006934;
-                                    padding-right:5px;
-                                    
+                                    padding-right: 5px;
                                 }
                             }
+                        }
+                    }
+                }
+                .buttonBox {
+                    .colBox {
+                        display: inline-block;
+                        width: ~"calc((100% / 2) - 4px)";
+                        button {
+                            margin: 3px;
                         }
                     }
                 }
@@ -1775,10 +1792,9 @@ table {
                             .info {
                                 font-size: 11px;
                                 line-height: 18px;
-                                &:nth-child(odd){
+                                &:nth-child(odd) {
                                     border-right: 0px solid #006934;
-                                    padding-right:5px;
-                                    
+                                    padding-right: 5px;
                                 }
                             }
                         }
