@@ -1498,14 +1498,35 @@ table {
                 }
             }
             .buttonBox {
-                .colBox {
-                    display: inline-block;
-                    width: ~"calc((100% / 4) - 4px)";
-                    .btn {
-                        margin: 3px;
+                .rowBox{
+                    .colBox-12 {
                         width: 100%;
+                        .vipPhone{
+                            display: block;
+                            font-weight: 900;
+                            font-size: 25px;
+                            margin: 5px auto;
+                            text-align: center;
+                            line-height: 50px;
+                            .btn{
+                                font-size: 23px;
+                            }
+                        }
+
+                    }
+                    .colBox-3 {
+                        display: inline-block;
+                        width: ~"calc((100% / 4) - 4px)";
+                        .btn {
+                            margin: 3px;
+                            width: 100%;
+                        }
+                    }
+                    #map{
+                        height: 300px;
                     }
                 }
+
             }
             &:before {
                 position: absolute;
@@ -1800,6 +1821,37 @@ table {
                         }
                     }
                 }
+                .buttonBox {
+                    .rowBox{
+                        .colBox-12 {
+                            width: 100%;
+                            .vipPhone{
+                                display: block;
+                                font-weight: 900;
+                                font-size: 25px;
+                                margin: 5px auto;
+                                text-align: center;
+                                line-height: 50px;
+                                .btn{
+                                    font-size: 23px;
+                                }
+                            }
+
+                        }
+                        .colBox-3 {
+                            display: inline-block;
+                            width: ~"calc((100% / 2) - 4px)";
+                            .btn {
+                                margin: 3px;
+                                width: 100%;
+                            }
+                        }
+                        #map{
+                            height: 300px;
+                        }
+                    }
+
+                }
             }
         }
     }
@@ -1843,4 +1895,44 @@ table {
             }
         }
     }
+}
+
+.btn-custom-darken.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+.btn-custom-darken {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#939393+1,000000+100 */
+background: #939393; /* Old browsers */
+background: -moz-linear-gradient(top, #939393 1%, #000000 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #939393 1%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #939393 1%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#939393', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff000000', endColorstr='#ff000000', GradientType=0);
+  border-color: #000000 #000000 #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #000000;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-custom-darken:hover,
+.btn-custom-darken:focus,
+.btn-custom-darken:active,
+.btn-custom-darken.active,
+.btn-custom-darken.disabled,
+.btn-custom-darken[disabled] {
+  color: #ffffff;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5b5b5+2,282828+100 */
+background: #b5b5b5; /* Old browsers */
+background: -moz-linear-gradient(top, #b5b5b5 2%, #282828 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #b5b5b5 2%,#282828 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #b5b5b5 2%,#282828 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5b5b5', endColorstr='#282828',GradientType=0 ); /* IE6-9 */
+}
+.btn-custom-darken:active,
+.btn-custom-darken.active {
+  background-color: #000000 ;
 }

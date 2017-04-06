@@ -8,7 +8,6 @@ $(document).ready(function() {
 
     $(".page[data-page='5'] .bottomArea .history_build_box").each(function(key){
     	var count = $(".history_build_box:eq("+key+") .swiper-container .swiper-slide").length;
-    	console.log(key, count);
 	    new Swiper(".history_build_box:eq("+key+") .swiper-container", {
 	        // Optional parameters
 	        loop: true,
@@ -53,7 +52,6 @@ $(document).ready(function() {
                 }
                 break;
             case "line":
-
                 if (mobileAndTabletcheck()) {
                     var href = "http://line.me/R/msg/text/?"+encodeURIComponent(shareLink);
                     location.href = href;
@@ -64,4 +62,20 @@ $(document).ready(function() {
                 break;
         }
     });
+
+
 });
+
+var map;
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 25.047747, lng: 121.576629},
+      zoom: 14,
+    });
+
+    var marker = new google.maps.Marker({
+      position: {lat: 25.047747, lng: 121.576629},
+      map: map,
+      title: ''
+    });
+}
